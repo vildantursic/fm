@@ -1,0 +1,26 @@
+<section layout="row" flex>
+  <md-content flex>
+    <div id="map"></div>
+    <div flex></div>
+  </md-content>
+
+  <md-button id="return-nav-right-btn" class="md-fab md-mini return-nav-right-btn btn-fix" aria-label="Eat cake">
+      <i class="fa fa-angle-left fa-2x"></i>
+  </md-button>
+
+  <md-sidenav id="right-nav" class="md-sidenav-right md-whiteframe-z2 right-nav" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-light">
+      <div class="md-toolbar-tools">
+        <h1 class="md-toolbar-tools">Fleet overview</h1>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="close()" id="right-nav-btn" aria-label="More">
+          <i class="fa fa-angle-right fa-2x"></i>
+        </md-button>
+      </div>
+
+    </md-toolbar>
+    <md-content ng-controller="RightCtrl" layout-padding>
+
+    </md-content>
+  </md-sidenav>
+</section>

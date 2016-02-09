@@ -1,0 +1,26 @@
+{
+  "name": "fm",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Vildan Tursic <vildantursic@hotmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-material": "~1.0.5",
+    "angular-ui-router": "~0.2.17",
+    "jquery": "^2.2.0",
+    "angular-material-data-table": "^0.9.11",
+    "photoswipe": "^4.1.1"
+  }
+}
