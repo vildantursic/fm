@@ -55,17 +55,20 @@
       <div flex>
         <div class="car-upload-img">
           <img src="http://i2.pinger.pl/pgr496/7da4a28b00222038514b48dc/Chevrolet_Camaro_2010_Pioneer_Stage4_7.jpg" alt="">
-          <input type="file" id="fileinput" multiple="multiple" accept="image/*"/>
+          <!-- <input type="file" id="fileinput" multiple="multiple" accept="image/*"/> -->
+          <input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+          <md-button class="md-raised md-primary" href="#" id="fileSelect">Upload file</md-button>
         </div>
+        <output id="list"></output>
         <div class="vehicle-form-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-              <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+          <figure ng-repeat="img in fileList" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="{{img.name}}" itemprop="contentUrl" data-size="964x1024">
+              <img ng-src="{{img.name}}" itemprop="thumbnail" alt="Image description" />
             </a>
-            <figcaption itemprop="caption description">Image caption 2.1</figcaption>
+            <figcaption itemprop="caption description">{{img.id}}</figcaption>
           </figure>
-
+<!--
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
               <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
@@ -78,7 +81,7 @@
               <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
             </a>
             <figcaption itemprop="caption description">Image caption 2.3</figcaption>
-          </figure>
+          </figure> -->
 
         </div>
         <photoswipe></photoswipe>
@@ -99,6 +102,14 @@
           <label>Last Name</label>
           <input ng-model="theMax">
         </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>First name</label>
+          <input ng-model="user.firstName">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Last Name</label>
+          <input ng-model="theMax">
+        </md-input-container>
       </div>
       <div flex>
         <md-input-container class="md-block" flex-gt-sm>
@@ -112,6 +123,33 @@
         <md-input-container class="md-block" flex-gt-sm>
           <label>Last Name</label>
           <input ng-model="theMax">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Last Name</label>
+          <input ng-model="theMax">
+        </md-input-container>
+      </div>
+    </div>
+    <h4>Vehicle aquisition details</h4>
+    <div flex layout="row" layout-padding>
+      <div flex>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Last Name</label>
+          <input ng-model="theMax">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>First name</label>
+          <input ng-model="user.firstName">
+        </md-input-container>
+      </div>
+      <div flex>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Last Name</label>
+          <input ng-model="theMax">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>First name</label>
+          <input ng-model="user.firstName">
         </md-input-container>
       </div>
     </div>

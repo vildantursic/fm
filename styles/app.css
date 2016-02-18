@@ -1,4 +1,4 @@
-#map {
+#map, #map-review {
     height: 93vh;
     width: 100%;
 }
@@ -48,8 +48,8 @@
 .return-nav-right-btn {
   z-index: 2;
   position: absolute;
-  top: 8vh;
-  right: 3vh;
+  top: 70px;
+  right: 20px;
 }
 
 .add-button-place {
@@ -134,6 +134,52 @@
 /*////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////*/
+
+.box {
+  overflow: hidden;
+}
+.main-box {
+  text-align: left !important;
+  height: 180px;
+}
+.main-box p{
+  margin: 0;
+  text-align: center;
+  height: 20%;
+  padding-top: 5px;
+}
+
+.main-box .info-box {
+  width: 100%;
+  height: 80%;
+  padding: 5px;
+}
+.main-box .info-box img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.gray {
+  background: #f5f5f5;
+}
+.green {
+  background: #b9f6ca;
+}
+.yellow {
+  background: #ffff8d;
+}
+.blue {
+  background: #84ffff;
+}
+.purple {
+  background: #b388ff;
+}
+.red {
+  background: #ff8a80;
+}
+
+/*/////////////////////////////*/
 
 .dashboard-grid-list md-grid-list {
   margin: 8px;
@@ -288,8 +334,8 @@
 }
 
 .wrapper--assigned-tiles {
-    float: left;
-    width: 80%;
+    /*float: left;
+    width: 80%;*/
     /*-webkit-transition: -webkit-transform 0.1s ease-out;
     -moz-transition: -moz-transform 0.1s ease-out;
     -o-transition: -o-transform 0.1s ease-out;
@@ -304,6 +350,16 @@
         width: 23.5%;
     }
 
+    @media (max-width: 600px) {
+      .wrapper--assigned-tiles > .tile {
+          border-style: dashed;
+          height: 180px;
+         /* -webkit-animation: zoom-in 0.3s cubic-bezier(.1, -0.04, .91, .94) forwards;
+          animation: zoom-in 0.3s cubic-bezier(.1, -0.04, .91, .94) forwards;*/
+          width: 100%;
+      }
+    }
+
     .wrapper--assigned-tiles > .tile:nth-child(4),
     .wrapper--assigned-tiles > .tile:nth-child(8) {
         margin-right: 0;
@@ -313,7 +369,7 @@
         background: #f5f5f5;
         border-color: #d6d6d6;
         border-style: solid;
-        line-height: 180px;
+        /*line-height: 180px;*/
     }
 
     .assigned-tile,
@@ -332,8 +388,8 @@
     }
 
 .wrapper--unassigned-tiles {
-    float: right;
-    width: 20%;
+    /*float: right;
+    width: 20%;*/
     height: 380px;
     overflow: auto;
     padding-right: 10px;
@@ -344,7 +400,7 @@
         text-align: center;
         width: 100%;
         height: 30px;
-        line-height: 30px;
+        /*line-height: 30px;*/
     }
 
 @-webkit-keyframes zoom-in {
@@ -398,4 +454,64 @@ child(2),
 .wrapper--assigned-tiles .tile:nth-child(8) {
     -webkit-animation-delay: .12s;
     animation-delay: .12s;
+}
+
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
+
+.dialog-list {
+  width: 700px;
+  height: 300px;
+}
+
+.vehicle-box {
+  width: 38%;
+  float: left;
+  background: #2196F3;
+  /*height: 150px;
+  padding: 5px;
+  margin: 5px;*/
+}
+.vehicle-box img{
+  width: 100%;
+  /*float: right;*/
+  /*height: 70px;*/
+  /*margin: 10px;*/
+  border: solid 1px white;
+}
+/*/////////////////*/
+
+.driver-box {
+  width: 38%;
+  float: left;
+  background: #2196F3;
+  /*height: 150px;
+  padding: 5px;
+  margin: 5px;*/
+}
+.driver-box img{
+  width: 100%;
+  /*float: right;
+  height: 70px;
+  margin: 10px;*/
+}
+
+/*//////////////////////////////////////////////////*/
+/*Charts*/
+
+.chart {
+  width:350px;
+  height: 250px;
+}
+@media (max-width: 800px) {
+  .chart {
+    width:450px;
+    height: 400px;
+  }
+}
+
+/*//////////////////////////////////////////////////*/
+/*Menu*/
+.active {
+  background: rgb(33,150,243);
 }

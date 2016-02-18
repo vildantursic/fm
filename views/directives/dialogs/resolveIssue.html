@@ -1,0 +1,149 @@
+<md-dialog aria-label="Resolve Issue">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Resolve Issue</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <i class="fa fa-times fa-2x"></i>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="max-width:800px;max-height:810px; ">
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="one">
+          <md-content class="md-padding">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+            <div layout="column">
+              <div flex layout="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>First name</label>
+                  <input ng-model="user.firstName">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>First name</label>
+                  <input ng-model="user.firstName">
+                </md-input-container>
+              </div>
+              <div flex layout="row">
+                <div flex="80">
+                  <div id="map" style="height: 300px;"></div>
+                </div>
+                <div flex="20">
+                  <md-list>
+                    <md-list-item class="md-1-line" ng-repeat="item in [1,2,3,4,5]">
+                      <div class="md-list-item-text" layout="column">
+                        <p>{{ $index }}</p>
+                      </div>
+                      <md-divider ></md-divider>
+                    </md-list-item>
+                  </md-list>
+                </div>
+              </div>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="two">
+          <md-content class="md-padding">
+            <div layout="row">
+              <div flex="80">
+                <div flex>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>First name</label>
+                    <input ng-model="user.firstName">
+                  </md-input-container>
+                </div>
+                <div flex class="dialog-list">
+                  <h4>Available Vehicles and Fleets</h4>
+                  <vehicle></vehicle>
+                  <vehicle></vehicle>
+                  <vehicle></vehicle>
+                  <vehicle></vehicle>
+                  <vehicle></vehicle>
+                </div>
+              </div>
+              <div flex="20">
+                <md-list>
+                  <md-list-item class="md-1-line" ng-repeat="item in [1,2,3,4,5]">
+                    <div class="md-list-item-text" layout="column">
+                      <p>{{ $index }}</p>
+                    </div>
+                    <md-divider ></md-divider>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="three">
+          <md-content class="md-padding">
+            <div layout="row">
+              <div flex="80">
+                <div flex>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>First name</label>
+                    <input ng-model="user.firstName">
+                  </md-input-container>
+                </div>
+                <div flex class="dialog-list">
+                  <h4>Available Drivers</h4>
+                  <driver></driver>
+                  <driver></driver>
+                  <driver></driver>
+                  <driver></driver>
+                  <driver></driver>
+                </div>
+              </div>
+              <div flex="20">
+                <md-list>
+                  <md-list-item class="md-1-line" ng-repeat="item in [1,2,3,4,5]">
+                    <div class="md-list-item-text" layout="column">
+                      <p>{{ $index }}</p>
+                    </div>
+                    <md-divider ></md-divider>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="four">
+          <md-content class="md-padding">
+            <div layout="column">
+              <div flex layout="row">
+                <div flex>
+                  <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                </div>
+                <div flex>
+                  <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                </div>
+              </div>
+              <div flex>
+                <div layout="row" style="width: 750px;">
+                  <div flex="50">
+                    <div id="map-review" style="height: 300px;"></div>
+                  </div>
+                  <div flex="50">
+                    Assigned drivers
+                  </div>
+                </div>
+              </div>
+              <div flex>
+                Assigned vehicles and fleets
+              </div>
+            </div>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer('not useful')" >
+        Cancel
+      </md-button>
+      <md-button ng-click="answer('useful')" style="margin-right:20px;" >
+        Submit
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

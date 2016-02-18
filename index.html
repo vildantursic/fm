@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./bower_components/angular-material-data-table/dist/md-data-table.min.css" type="text/css"/>
     <link rel="stylesheet" href="./bower_components/photoswipe/dist/photoswipe.css" type="text/css"/>
     <link rel="stylesheet" href="./bower_components/photoswipe/dist/default-skin/default-skin.css">
+    <link rel="stylesheet" href="./bower_components/angular-chart.js/dist/angular-chart.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/app.css" media="screen" title="no title" charset="utf-8">
 
@@ -31,16 +32,16 @@
             </md-button>
             <p hide-md show-gt-md>
               <md-menu-item>
-                  <md-button ui-sref="map">Map</md-button>
+                  <md-button ui-sref-active="active" ui-sref="map">Map</md-button>
               </md-menu-item>
               <md-menu-item>
-                  <md-button ui-sref="vehicle">Vehicle</md-button>
+                  <md-button ui-sref-active="active" ui-sref="vehicle">Vehicle</md-button>
               </md-menu-item>
               <md-menu-item>
-                  <md-button ui-sref="dashboard">Dashboard</md-button>
+                  <md-button ui-sref-active="active" ui-sref="dashboard">Dashboard</md-button>
               </md-menu-item>
               <md-menu-item>
-                  <md-button ui-sref="taskManagement">Task Management</md-button>
+                  <md-button ui-sref-active="active" ui-sref="taskManagement">Task Management</md-button>
               </md-menu-item>
             </p>
           </md-content>
@@ -68,13 +69,26 @@
     <script type="text/javascript" src="./bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js" charset="utf-8"></script>
     <script type="text/javascript" src="./bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+    <script type="text/javascript" src="./bower_components/Chart.js/Chart.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <script type="text/javascript" src="./bower_components/photoswipe/dist/photoswipe.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="./bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script type="text/javascript" src="./bower_components/ng-file-upload/ng-file-upload.js"></script>
 
     <script src="./app/app.js" charset="utf-8"></script>
 
+    <!-- Controllers -->
+    <script src="./app/controllers/dashboardCtrl.js" charset="utf-8"></script>
+    <script src="./app/controllers/mainCtrl.js" charset="utf-8"></script>
+    <script src="./app/controllers/mapCtrl.js" charset="utf-8"></script>
+    <script src="./app/controllers/taskManagementCtrl.js" charset="utf-8"></script>
+    <script src="./app/controllers/vehicleCtrl.js" charset="utf-8"></script>
+    <script src="./app/controllers/vehicleFormCtrl.js" charset="utf-8"></script>
+
     <!-- Directives -->
     <script src="./app/directives/main/photoswipe.js" charset="utf-8"></script>
+    <script src="./app/directives/main/vehicle.js" charset="utf-8"></script>
+    <script src="./app/directives/main/driver.js" charset="utf-8"></script>
 
   </body>
 </html>

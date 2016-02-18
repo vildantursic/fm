@@ -2,46 +2,62 @@
 <div layout-padding layout="column">
   <div flex>
     <section class="wrapper--tiles cf">
-      <ul class="wrapper--assigned-tiles unstyled-list cf">
-        <li class="tile assigned-tile" draggable="true" data-index="0">A</li>
-        <li class="tile assigned-tile" draggable="true" data-index="1">B</li>
-        <li class="tile" draggable="true" data-index="2"></li>
-        <li class="tile" draggable="true" data-index="3"></li>
-        <li class="tile" draggable="true" data-index="4"></li>
-        <li class="tile" draggable="true" data-index="5"></li>
-        <li class="tile" draggable="true" data-index="6"></li>
-        <li class="tile" draggable="true" data-index="7"></li>
-      </ul>
-      <ul class="wrapper--unassigned-tiles unstyled-list cf">
-        <li class="tile unassigned-tile" draggable="true" data-index="0a">0</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="1a">1</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="2a">2</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="3a">3</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="4a">4</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="5a">5</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="6a">6</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="7a">7</li>
-        <li class="tile unassigned-tile" draggable="true" data-index="8a">8</li>
-      </ul>
+      <div layout="row" layout-xs="column" layout-sm="column">
+        <div flex-lg="75" flex-xs="100">
+          <ul class="wrapper--assigned-tiles unstyled-list cf">
+            <li class="tile assigned-tile" draggable="true" data-index="0">A</li>
+            <li class="tile assigned-tile" draggable="true" data-index="1">B</li>
+            <li class="tile" draggable="true" data-index="2"></li>
+            <li class="tile" draggable="true" data-index="3"></li>
+            <li class="tile" draggable="true" data-index="4"></li>
+            <li class="tile" draggable="true" data-index="5"></li>
+            <li class="tile" draggable="true" data-index="6"></li>
+            <li class="tile" draggable="true" data-index="7"></li>
+          </ul>
+        </div>
+        <div flex-lg="25" flex-xs="100">
+          <ul class="wrapper--unassigned-tiles unstyled-list cf">
+            <li class="tile unassigned-tile box" draggable="true" data-index="0a"><div ng-include="'/views/directives/main/fuel.html'"></div></li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="1a"><div ng-include="'/views/directives/main/team.html'"></div></li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="2a">2</li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="3a">3</li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="4a">4</li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="5a">5</li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="6a"><div ng-include="'/views/directives/main/fuel.html'"></div></li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="7a">7</li>
+            <li class="tile unassigned-tile box" draggable="true" data-index="8a">8</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
   <div flex>
     <section class="dashboard-grid-list">
       <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px" >
-        <md-grid-tile class="blue" md-rowspan="2" md-colspan="2" md-rowspan-sm="2" md-colspan-sm="2">
+        <md-grid-tile class="gray" md-rowspan="2" md-colspan="2" md-rowspan-sm="2" md-colspan-sm="2">
           <md-grid-tile-header>
             <h3>Task management</h3>
           </md-grid-tile-header>
+          <canvas id="line" class="chart chart-line" chart-data="data"
+            chart-labels="labels" chart-legend="true" chart-series="series"
+            chart-click="onClick" chart-colours="colours">
+          </canvas>
         </md-grid-tile>
-        <md-grid-tile class="blue" md-rowspan="2" md-colspan="2" md-rowspan-sm="2" md-colspan-sm="2">
+        <md-grid-tile class="gray" md-rowspan="2" md-colspan="2" md-rowspan-sm="2" md-colspan-sm="2">
           <md-grid-tile-header>
             <h3>Vehicles</h3>
           </md-grid-tile-header>
+          <canvas chart-legend="true" id="pie" class="chart chart-pie"
+            chart-data="dataA" chart-labels="labelsA">
+          </canvas>
         </md-grid-tile>
-        <md-grid-tile class="blue" md-rowspan="2" md-colspan="2" md-rowspan-sm="2" md-colspan-sm="2">
+        <md-grid-tile class="gray" md-rowspan="2" md-colspan="2" md-rowspan-sm="2" md-colspan-sm="2">
           <md-grid-tile-header>
             <h3>Drivers</h3>
           </md-grid-tile-header>
+          <canvas id="bar" class="chart chart-bar"
+            chart-data="dataB" chart-labels="labelsB" chart-series="seriesB">
+          </canvas>
         </md-grid-tile>
       </md-grid-list>
     </section>

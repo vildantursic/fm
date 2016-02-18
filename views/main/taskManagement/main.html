@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div layout="row">
+  <div layout="row" layout-xs="column" layout-sm="column">
     <div flex layout-padding>
       <md-whiteframe class="md-whiteframe-7dp" layout="column">
         <md-list>
@@ -15,7 +15,7 @@
           <md-list-item class="md-3-line" ng-repeat="item in [1,2,3,4,5]">
             <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
             <div class="md-list-item-text" layout="column">
-              <h3>{{ item.who }}</h3>
+              <h3>{{ $index }}</h3>
               <h4>{{ item.what }}</h4>
               <p>{{ item.notes }}</p>
             </div>
@@ -31,7 +31,7 @@
           <md-list-item class="md-3-line" ng-repeat="item in [1,2,3,4,5]">
             <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
             <div class="md-list-item-text" layout="column">
-              <h3>{{ item.who }}</h3>
+              <h3>{{ $index }}</h3>
               <h4>{{ item.what }}</h4>
               <p>{{ item.notes }}</p>
             </div>
@@ -47,7 +47,7 @@
           <md-list-item class="md-3-line" ng-repeat="item in [1,2,3,4,5]">
             <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
             <div class="md-list-item-text" layout="column">
-              <h3>{{ item.who }}</h3>
+              <h3>{{ $index }}</h3>
               <h4>{{ item.what }}</h4>
               <p>{{ item.notes }}</p>
             </div>
@@ -60,7 +60,7 @@
 
   <div layout="column">
     <div flex class="add-button-place">
-      <md-button class="md-fab md-primary add-btn" aria-label="Use Android">
+      <md-button class="md-fab md-primary add-btn" ng-click="resolveIssue($event)" aria-label="Use Android">
         <i class="fa fa-plus fa-2x"></i>
       </md-button>
     </div>
